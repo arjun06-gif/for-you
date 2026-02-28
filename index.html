@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Mawar Sayang ❤️</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.yes {
+    background: white;
+    color: #ff4d88;
+}
+
+.no {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    position: relative;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="mainBox">
+    <h2>Mawar Sayang 🌹</h2>
+    <p>Will you stay with me forever? 💍</p>
+    <button class="yes" onclick="showYes()">Yes 💖</button>
+    <button class="no" id="noBtn"
+        onmouseover="moveNo()"
+        ontouchstart="moveNo()"
+        onclick="moveNo()">No 🙈</button>
+</div>
+
+<script>
+function moveNo() {
+    const btn = document.getElementById("noBtn");
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 150 - 75;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+function showYes() {
+    document.getElementById("mainBox").innerHTML = `
+        <h1>YEAYYY 💖</h1>
+        <p>Makasih udah pilih "Yes"...<br>
+        Dari semua kemungkinan di dunia ini,<br>
+        kamu tetap pilih aku.</p>
+        <h3>Aku janji akan jaga Mawar selalu ❤️</h3>
+        <img src="mawar-photo.jpg" alt="Jun dan Mawar">
+        <p style="font-size:12px;">(Taruh foto kalian dengan nama: mawar-photo.jpg di folder yang sama)</p>
+    `;
+}
+</script>
+
+</body>
+</html>
